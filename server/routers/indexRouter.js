@@ -2,7 +2,11 @@ const {Router} = require("express");
 
 const indexRouter = Router();
 
-indexRouter.get('/',(req, res) => res.send("Welcome to Home Page"));
+indexRouter.get('/',(req, res) => {
+    console.log(req.session);
+    res.send("Welcome to Home Page")
+
+});
 
 
 
