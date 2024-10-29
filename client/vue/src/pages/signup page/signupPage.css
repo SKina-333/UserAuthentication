@@ -1,0 +1,39 @@
+.input-container.registerPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.button-group.registerPage {
+    
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+.button-group.registerPage * {
+    width: 13%;
+}
+
+
+.link-container {
+    text-align: center;
+}
+
+.cancel-link {
+    
+    
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+    font-family: var(--Jost);
+}
+
+.cancel-link:hover {
+    
+    text-decoration: underline;
+
+}

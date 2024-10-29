@@ -1,0 +1,24 @@
+.inputGroup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.inputGroup-container label {
+    font-family: var(--Poppin);
+    font-weight: 600;
+    color: rgb(88, 88, 88);
+}
+
+.inputGroup-container input {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(190, 190, 190);
+    color: rgb(0, 0, 0);
+    font-family: var(--Poppin);
+    font-size: 12px;
+    width: 210px;
+    height: 50px;
+}

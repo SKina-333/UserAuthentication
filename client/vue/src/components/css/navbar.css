@@ -1,0 +1,26 @@
+.navbar-container {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 100px;
+}
+
+.navItem {
+    text-decoration: none;
+    color: rgb(155, 155, 155);
+
+    font-size: 20px;
+    font-family: var(--Quicksand);
+    font-weight: 800;
+}
+
+.navItem:hover {
+    color: rgb(18, 107, 190);
+}
+
+.navItem.active {
+    color: rgb(18, 107, 190);
+}

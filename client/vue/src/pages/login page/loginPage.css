@@ -1,0 +1,20 @@
+.input-container.loginPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.button-group.loginPage {
+    
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.button-group.loginPage * {
+    width: 13%;
+}
