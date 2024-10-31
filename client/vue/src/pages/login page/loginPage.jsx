@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import axios from "axios";
 import './loginPage.css'
 import Nav from '../../components/navbar.jsx'
@@ -6,17 +6,32 @@ import Header from '../../components/header.jsx'
 import InputGroup from '../../components/inputGroup.jsx';
 import Button from '../../components/button.jsx';
 import { useNavigate  } from "react-router-dom";
+
+import {UserContext} from '../../contexts/userContext.jsx';
+
+import Alert from '../../components/alert.jsx';
 function LoginPage() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const { login } = useContext(UserContext);
+    const [flashMessage, setFlashMessage] = useState('');
+    const [showAlert, setShowAlert] = useState(false);
 
     const handleLogin = async () => {
         try {
-          await axios.post("http://localhost:5000/login", { username, password });
-          alert("Logged in!");
+          await axios.post("http://localhost:5000/login", { username, password })
+          .then(
+            function (response){
+              if (response.data.username) {
+                login(response.data.username); // Set user context
+              }
+            }
+          )
+          .catch();
+          
         } catch (error) {
           console.log(error);
-          alert("Login failed");
+          
         }
     };
     const navigate = useNavigate();

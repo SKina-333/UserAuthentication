@@ -24,3 +24,11 @@
 .navItem.active {
     color: rgb(18, 107, 190);
 }
+
+.profile {
+    color:  rgb(18, 107, 190);
+
+    font-size: 20px;
+    font-family: var(--Quicksand);
+    font-weight: 800;
+}
